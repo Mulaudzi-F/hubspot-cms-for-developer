@@ -1,0 +1,22 @@
+<!-- module html  -->
+
+<div id="modal-container" class="modal-container">
+  <div class="modal-content">
+    <span class="close-modal"> &times;</span>
+    <div class="modal-body"></div>
+  </div>
+</div>
+<div class="practice--image--container">
+  {% for item in module.field_group %}
+  <figure
+    data-image="{{ item.image_field.src }}"
+    data-caption="{{ item.figurecaption }}"
+    data-title="{{ item.title }}"
+    data-description="{{ item.description}}"
+  >
+    <img src="{{item.image_field.src}}" />
+    <figcaption>{{ item.figurecaption }}</figcaption>
+  </figure>
+
+  {% endfor %}
+</div>
